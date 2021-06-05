@@ -4,24 +4,34 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
+// state
+import { useRecoilState } from "recoil";
+
+import { loginState } from "../../state/loginState";
+
 Login.propTypes = {};
 
 function Login(props) {
+  const [login, setLogin] = useRecoilState(loginState);
+
   const [data, setData] = useState({
     option: null,
     password: null,
   });
 
-  function handleClick() {
-    console.log(data);
-    axios
-      .post("http://localhost:4000/user/login", data)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  async function handleClick() {
+    try {
+      let response = await axios.post("http://localhost:4000/user/login", data);
+      console.log(response);
+      if (response.data == "requeset eccept") {
+        setLogin({
+          isLogin: true,
+        });
+        console.log("done");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   function handleName(e) {
