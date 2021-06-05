@@ -1,0 +1,115 @@
+.chat-container {
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat {
+  width: 858px;
+  border: 1px solid #ccc;
+  height: 88vh;
+  margin-top: 4px;
+  display: flex;
+}
+
+/* List Chat */
+.listchat {
+  height: 88vh;
+  width: 300px;
+  border-right: 1px solid #ccc;
+}
+
+.listchat > .listchat__user {
+  font-size: var(--sizenormal);
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.listchat__user > .listchat__user-name {
+  width: 180px;
+}
+
+.listchat__user > .listchat__user-create-new-message {
+  margin-left: 10px;
+  height: 28px;
+  width: 28px;
+  border: 2px solid rgba(34, 32, 32, 0.863);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: var(--sizebig);
+}
+
+/* chat item */
+.listchat__container {
+  width: 300px;
+  height: 79vh;
+  overflow-y: scroll;
+}
+
+.listchat__container::-webkit-scrollbar {
+  display: none;
+}
+
+.listchat__container > .listchat__item {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 14px 0px 14px;
+}
+
+.listchat__item > img {
+  border-radius: 100%;
+  margin: 0px 14px;
+}
+
+/* area chat */
+.areachat {
+  width: 100%;
+}
+
+.areachat > .areachat__nochat {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.areachat__nochat > div {
+  margin-bottom: 28px;
+}
+
+.areachat__nochat > .areachat__nochat-create-new {
+  height: 60px;
+  width: 60px;
+  font-size: 40px;
+  border: 2px solid #000;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.areachat__desc > h2 {
+  font-size: var(--sizebig);
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.areachat__nochat > button {
+  background-color: var(--buttoncolor);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+}

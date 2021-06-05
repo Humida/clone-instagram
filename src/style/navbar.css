@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  height: 48px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar > div {
+  width: 360px;
+}
+
+.navbar > .navbar__direction {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+.navbar > .navbar__direction > a {
+  padding: 0px 6px;
+}
+
+.navbar > .navbar__search {
+  width: 180px;
+}
+
+.navbar__search > input {
+  width: 100%;
+  padding: 4px 10px;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  outline: none;
+}
+
+.navbar > .navbar__title {
+  font-family: "Indie Flower", cursive;
+  font-size: 34px;
+  font-weight: 800;
+  opacity: 0.8;
+  padding-left: 22px;
+  box-sizing: border-box;
+}

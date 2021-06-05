@@ -1,0 +1,24 @@
+:root {
+  --sizesmall: 14px;
+  --sizenormal: 18px;
+  --sizebig: 24px;
+
+  /* color */
+  --buttoncolor: #0095f6;
+  --colorlight: rgb(250, 250);
+  --colorwhite: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}

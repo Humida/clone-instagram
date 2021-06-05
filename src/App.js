@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./style/main.css";
+import "./style/helper.css";
+import "../src/icofont/icofont.min.css";
+
+// React
+import { useState } from "react";
+
+// import component
+import Navbar from "./components/Navbar/index";
+import Chat from "./components/Chat/index";
+import Auth from "./components/Auth/index";
+import NewFeeds from "./components/NewsFeeds/index";
 
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        {isLogin && <Navbar />}
+        {isLogin ? <NewFeeds /> : <Auth />}
+        <Route exact path="/chat" component={Chat} />
+        <Route exact path="/account" component={Auth} />
+      </div>
+    </Router>
   );
 }
 
