@@ -4,6 +4,8 @@
   border-bottom: 1px solid #ccc;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 .navbar > div {

@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./style/main.css";
 import "./style/helper.css";
@@ -16,6 +17,7 @@ import Chat from "./components/Chat/index";
 import Auth from "./components/Auth/index";
 import NewFeeds from "./components/NewsFeeds/index";
 import Login from "./components/Auth/login";
+import { loginState } from "./state/loginState";
 
 function App() {
   const [login, setLogin] = useRecoilState(loginState);
@@ -31,6 +33,7 @@ function App() {
             return login.isLogin ? <NewFeeds /> : <Auth />;
           }}
         />
+
         <Route exact path="/chat" component={Chat} />
         <Route exact path="/account" component={Auth} />
       </div>
