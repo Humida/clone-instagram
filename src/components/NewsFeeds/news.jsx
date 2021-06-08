@@ -10,6 +10,12 @@ function News(props) {
   return (
     <div className="news">
       <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 }

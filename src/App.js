@@ -31,7 +31,7 @@ function App() {
             return login.isLogin ? <NewFeeds /> : <Auth />;
           }}
         />
-        <Route exact path="/chat" component={Chat} />
+        {/* <Route exact path="/chat" component={Chat} /> */}
         <Route exact path="/account" component={Auth} />
       </div>
     </Router>

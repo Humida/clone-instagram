@@ -28,10 +28,9 @@ app.use("/user", userRouter);
 
 const PORT = 4000 || process.env.PORT;
 app.listen(PORT, () => {
-  console.log(`app is litening on ${PORT}`)
+  console.log(`app is litening on ${PORT}`);
 });
 
 console.log();
 
 console.log("'String'");
-

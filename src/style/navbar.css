@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   position: fixed;
+  background: #fff;
+  z-index: 10000;
 }
 
 .navbar > div {

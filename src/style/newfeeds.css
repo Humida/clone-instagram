@@ -99,7 +99,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin: 40px 0px 60px;
+  border: 1px solid #ccc;
 }
 
 .post > .post__header {
@@ -108,9 +109,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #ccc; */
 }
 
 .post__header > .post__header--more {
@@ -138,4 +139,66 @@
   margin-left: 16px;
   font-size: var(--sizenormal);
   font-weight: 700;
+}
+
+.post__content--dialog {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post__content--dialog > div {
+  font-size: 28px;
+  padding: 0px 20px;
+}
+
+.post__content--quantity-dialog {
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.post__content--author {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.post__content--author--name {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0px 20px;
+}
+
+.post__content--comments {
+  margin-top: 20px;
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post__content--comments > i {
+  font-size: 28px;
+  margin: 0px 20px;
+}
+
+.post__content--comments > button {
+  margin: 0px 20px;
+  color: var(--buttoncolor);
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+.post__content--comments > input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
 }
