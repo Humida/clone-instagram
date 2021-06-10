@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./style/main.css";
 import "./style/helper.css";
 import "../src/icofont/icofont.min.css";
-
+import io from "socket.io-client";
 // manage state
 import { useRecoilState } from "recoil";
-import { loginState } from "./state/loginState";
+// import { loginState } from "./state/loginState";
+import { adminState } from "./state/adminState";
 
-// React
 import { useState } from "react";
 
 // import component
@@ -17,21 +17,24 @@ import Auth from "./components/Auth/index";
 import NewFeeds from "./components/NewsFeeds/index";
 import Login from "./components/Auth/login";
 
-function App() {
-  const [login, setLogin] = useRecoilState(loginState);
-  console.log(login);
+function App({ loaded }) {
+  const [admin, setAdmin] = useRecoilState(adminState);
+  // if (!loaded) {
+  //   return null;
+  // }
+
   return (
     <Router>
       <div className="app">
-        {login.isLogin && <Navbar />}
+        {admin !== null && <Navbar />}
         <Route
           exact
           path="/"
           component={() => {
-            return login.isLogin ? <NewFeeds /> : <Auth />;
+            return admin !== null ? <NewFeeds /> : <Auth />;
           }}
         />
-        {/* <Route exact path="/chat" component={Chat} /> */}
+        <Route exact path="/chat" component={Chat} />
         <Route exact path="/account" component={Auth} />
       </div>
     </Router>

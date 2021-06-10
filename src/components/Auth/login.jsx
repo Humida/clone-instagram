@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 
 // state
 import { useRecoilState } from "recoil";
-
-import { loginState } from "../../state/loginState";
+import { adminState } from "../../state/adminState";
+// import { loginState } from "../../state/loginState";
 
 Login.propTypes = {};
 
 function Login(props) {
-  const [login, setLogin] = useRecoilState(loginState);
+  const [admin, setAdmin] = useRecoilState(adminState);
 
   const [data, setData] = useState({
     option: null,
@@ -23,10 +23,8 @@ function Login(props) {
     try {
       let response = await axios.post("http://localhost:4000/user/login", data);
       console.log(response);
-      if (response.data == "requeset eccept") {
-        setLogin({
-          isLogin: true,
-        });
+      if (typeof response.data == "object") {
+        setAdmin(response.data);
         console.log("done");
       }
     } catch (error) {
@@ -71,10 +69,9 @@ function Login(props) {
       </div>
       <div className="login__redirect-singin">
         <p>Don't have an account</p>
-        <Link>Sign up</Link>
+        <Link onClick={props.handleToRegister}>Sign up</Link>
       </div>
     </div>
   );
 }
-
 export default Login;

@@ -10,6 +10,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "http": "0.0.1-security",
     "install": "^0.13.0",
     "mongoose": "^5.12.12",
     "node-sass": "^6.0.0",
@@ -20,6 +21,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "recoil": "^0.3.1",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -46,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

@@ -39,9 +39,17 @@ module.exports = {
     let findUserWithUsername = await usersModel.findOne(logUsername);
 
     if (findUserWithGmail !== null || findUserWithUsername !== null) {
-      res.send("requeset eccept");
+      res.send(findUserWithGmail);
     } else {
       res.send("request denied");
+    }
+  },
+  getAllUsers: async function (req, res, next) {
+    try {
+      let users = await usersModel.find({});
+      res.send(users);
+    } catch (err) {
+      console.log(err);
     }
   },
 };

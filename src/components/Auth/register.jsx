@@ -102,7 +102,7 @@ function Regisger(props) {
       </div>
       <div className="register__redirect-login">
         <p>Have a account ?</p>
-        <Link> Sing in</Link>
+        <Link onClick={props.handleToLogin}> Sing in</Link>
       </div>
     </div>
   );

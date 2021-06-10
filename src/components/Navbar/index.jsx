@@ -2,6 +2,7 @@ import "../../style/navbar.css";
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Chat from "../Chat/index";
 Navbar.propTypes = {};
 
 function Navbar(props) {
@@ -12,7 +13,7 @@ function Navbar(props) {
         <input type="text" />
       </div>
       <div className="navbar__direction">
-        <Link>
+        <Link to="/">
           <i className="icofont-home"></i>
         </Link>
         <Link to="/chat">
@@ -21,7 +22,7 @@ function Navbar(props) {
         <Link>
           <i class="icofont-notification"></i>
         </Link>
-        <Link>
+        <Link to="/account">
           <i class="icofont-ui-user"></i>
         </Link>
       </div>

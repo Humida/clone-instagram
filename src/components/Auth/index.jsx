@@ -11,7 +11,22 @@ Auth.propTypes = {};
 
 function Auth(props) {
   const [isHaveAccount, setIsHaveAccount] = useState(true);
-  return <div className="auth">{isHaveAccount ? <Login /> : <Register />}</div>;
+  function handleToLogin() {
+    setIsHaveAccount(true);
+  }
+
+  function handleToRegister() {
+    setIsHaveAccount(false);
+  }
+  return (
+    <div className="auth">
+      {isHaveAccount ? (
+        <Login handleToRegister={handleToRegister} />
+      ) : (
+        <Register handleToLogin={handleToLogin} />
+      )}
+    </div>
+  );
 }
 
 export default Auth;
