@@ -4,7 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+./src/icofont
+/src/icofont
+.icofont
+iconfont
 # testing
 /coverage
 
